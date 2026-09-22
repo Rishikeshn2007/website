@@ -1,0 +1,95 @@
+:root {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #18221e;
+  background: #e7eee8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.page-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 2rem;
+  background:
+    radial-gradient(circle at 80% 10%, rgba(246, 190, 91, 0.35), transparent 28rem),
+    linear-gradient(135deg, #e7eee8 0%, #c7dbd0 100%);
+}
+
+.hero {
+  width: min(100%, 46rem);
+  padding: clamp(2rem, 8vw, 6rem) clamp(1.5rem, 8vw, 5rem);
+  border: 1px solid rgba(24, 34, 30, 0.18);
+  background: rgba(255, 252, 243, 0.76);
+  box-shadow: 1rem 1rem 0 rgba(24, 34, 30, 0.1);
+}
+
+.eyebrow {
+  margin: 0 0 1.5rem;
+  color: #9c4b2b;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 11ch;
+  margin: 0;
+  font-size: clamp(3rem, 8vw, 5.75rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.intro {
+  max-width: 34rem;
+  margin: 2rem 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+code {
+  padding: 0.15rem 0.35rem;
+  background: #d7e3d9;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.85rem 1.1rem;
+  color: #fffaf0;
+  background: #9c4b2b;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.button:hover {
+  background: #78391f;
+  transform: translate(-0.15rem, -0.15rem);
+}
+
+@media (max-width: 36rem) {
+  .page-shell {
+    padding: 1rem;
+  }
+
+  .hero {
+    box-shadow: 0.5rem 0.5rem 0 rgba(24, 34, 30, 0.1);
+  }
+}
